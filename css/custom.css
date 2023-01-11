@@ -1,7 +1,7 @@
 /********************************一图流教程
 /* 页脚与头图透明 */
 #footer {
-    background: transparent !important;
+    background: #fcfdff !important;
   }
   #page-header {
     background: transparent !important;
@@ -29,7 +29,7 @@
 /* 为载入的字体取名字(随意) */
 font-family: 'YSHST';
 /* 字体文件地址(相对或者绝对路径都可以) */
-src: url(/font/优设好身体.woff2);
+src: url(/font/LXGWWenKai-Regular.ttf);
 /* 定义加粗样式(加粗多少) */
 font-weight: normal;
 /* 定义字体样式(斜体/非斜体) */
@@ -55,11 +55,11 @@ font-display: block;
   }
   /* 子菜单横向展示 */
   #nav .menus_items .menus_item:hover .menus_item_child {
-    display: flex !important;
+    /* display: flex !important; */
   }
   /* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
   .menus_items .menus_item:nth-child(2) .menus_item_child {
-    left: -125px;
+    /* left: -125px; */
   }
 
 /********************************黑夜霓虹灯2.0（纯CSS实现）
@@ -262,3 +262,32 @@ font-display: block;
     background: rgba(25, 25, 25, 0.9) !important;
     color: #ffffff;
   }
+
+/****************************************************************
+这个可以文档图标引入也可以跟以后导航图标美化有关联
+/****************************************************************
+  /* 引入图标 */
+@import "//at.alicdn.com/t/c/font_3860415_j284bd0pzlq.css";
+svg.icon {
+  width: 1.28em;
+  height: 1.28em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+/********************************
+/* 自己尝试固定导航栏 */
+#nav{
+  transition: none!important;
+}
+.nav-fixed #nav{
+  transform: translateY(58px);
+}
+/****************************************************************
+这个css说明当元素#nav被添加类.nav-fixed时，#nav元素将被移动58px。
+/****************************************************************
+/* 自己尝试鼠标到导航栏更改背景色为白色 */
+#nav:hover{
+  background-color: #3a3a3a52;
+}
