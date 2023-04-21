@@ -1,0 +1,8 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>.wrap { I
+    margin: 0 auto;
+    width: 600px;
+    height: 300px;
+    background-color: blue;
+}
+.box {
+    width: calc(600px * 4);

@@ -1,0 +1,96 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* 波浪css */
+/* 这段CSS代码用于创建一个多彩动态波浪，它使用了CSS动画和SVG图像。
+
+width：定义SVG图像的宽度，默认为100％。
+
+position：定义SVG图像的位置，默认为绝对定位。
+
+left：定义SVG图像的左边距，默认为0。
+
+bottom：定义SVG图像的底边距，默认为-12px。
+
+z-index：定义SVG图像的堆叠顺序，默认为5。 */
+.main-hero-waves-area {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    z-index: 5;
+  }
+  .waves-area .waves-svg {
+    width: 100%;
+    height: 4rem;
+  }
+  /* Animation */
+  /* animation：定义SVG图像的动画，默认为move-forever，持续时间为25秒，曲线为cubic-bezier（0.5,0.5,0.45,0.5），无限循环。
+
+animation-delay：定义SVG图像的动画延迟，默认为-2s，-3s，-4s，-5s。
+
+animation-duration：定义SVG图像的动画持续时间，默认为7s，10s，13s，20s。
+
+fill：定义SVG图像的填充颜色，默认为#f7f9febd，#f7f9fe82，#f7f9fe36，#f7f9fe，[data-theme="dark"]时为#18171dc8，#18171d80，#18171d3e，#18171d。
+
+transform：定义SVG图像的变换，默认为translate3d(-85px,0,0)和translate3d(77px,0,0)。
+
+@media：定义SVG图像的响应式，当屏幕宽度小于768px时，SVG图像的高度为33px，最小高度为33px。 */
+
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    fill: #f7f9febd;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    fill: #f7f9fe82;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+    fill: #f7f9fe36;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: #f7f9fe;
+  }
+  /* 黑色模式背景 */
+  [data-theme="dark"] .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    fill: #18171dc8;
+  }
+  [data-theme="dark"] .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    fill: #18171d80;
+  }
+  [data-theme="dark"] .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+    fill: #18171d3e;
+  }
+  [data-theme="dark"] .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: #18171d;
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-91px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves-area .waves-svg {
+      height: 40px;
+      min-height: 40px;
+    }
+  }
